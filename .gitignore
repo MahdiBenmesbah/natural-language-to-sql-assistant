@@ -1,0 +1,8 @@
+API_Key
+API_Key.txt
+.env
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.ipynb
+ecommerce_old.db
