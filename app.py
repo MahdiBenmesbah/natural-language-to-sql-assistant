@@ -38,12 +38,18 @@ st.info(
 # LOAD API KEY
 # =========================
 
-load_dotenv(r"C:\Users\ASUS\projet_llm_sql\API_Key", override=True)
+# Local development: load API key from API_Key file
+load_dotenv("API_Key", override=True)
 
-api_key = os.getenv("GEMINI_API_KEY")
+# Streamlit Cloud: read API key from secrets
+api_key = st.secrets.get("GEMINI_API_KEY", None)
+
+# Local fallback: read API key from environment variable
+if not api_key:
+    api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
-    st.error("Clé API introuvable. Vérifie ton fichier API_Key.")
+    st.error("API key not found. Add GEMINI_API_KEY in Streamlit secrets or local API_Key file.")
     st.stop()
 
 client = genai.Client(api_key=api_key)
@@ -53,7 +59,7 @@ client = genai.Client(api_key=api_key)
 # DATABASE CONFIG
 # =========================
 
-DB_PATH = r"C:\Users\ASUS\projet_llm_sql\ecommerce.db"
+DB_PATH = "ecommerce.db"
 
 if not os.path.exists(DB_PATH):
     st.error("Base de données ecommerce.db introuvable.")
