@@ -14,6 +14,11 @@ Top 5 best-selling products
 
 The app generates a SQL query, executes it on the database, and displays the result as a table and chart.
 
+## Live Demo
+
+Try the application here:
+
+[Open the Streamlit App]([https://ton-app.streamlit.app](https://natural-language-to-sql-assistant-stvuvc9lewwbw4rhceduzx.streamlit.app/))
 ## Features
 
 - Natural language to SQL generation
