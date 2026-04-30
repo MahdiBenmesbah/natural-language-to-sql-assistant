@@ -102,16 +102,16 @@ The application blocks dangerous SQL keywords such as:
 
 Main interface with project description, database KPIs, sidebar examples, and the natural language input field.
 
-![Home Page](assets/home.png)
+![Home Page](Assets/home.png)
 
 ### Generated SQL and Result
 
 The assistant converts a natural language question into SQL and executes it on the SQLite database.
 
-![SQL Result](assets/sql_result.png)
+![SQL Result](Assets/sql_result.png)
 
 ### Automatic Chart
 
 When the result contains a categorical column and a numeric column, the app automatically displays a chart.
 
-![Chart](assets/chart.png)
+![Chart](Assets/chart.png)
